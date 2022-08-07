@@ -11,7 +11,7 @@ variables:
   azureServiceConnectionId: '996cd4c0-3a2e-406b-a1c8-09bf453b328a'
 
   # Web app name
-  webAppName: 'flask-ml-service'
+  webAppName: 'flask-ml-service-naza'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -23,7 +23,7 @@ variables:
   projectRoot: $(System.DefaultWorkingDirectory)
 
   # Python version: 3.7
-  pythonVersion: 3.8
+  pythonVersion: '3.7'
 
 stages:
 - stage: Build
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : '
+            displayName: 'Deploy Azure Web App : flask-ml-service-naza'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
