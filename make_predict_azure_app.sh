@@ -2,6 +2,7 @@
 
 PORT=443
 echo "Port: $PORT"
+echo "testing my understanding"
 
 # POST method predict
 curl -d '{
